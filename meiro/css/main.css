@@ -1,0 +1,355 @@
+@charset "utf-8";
+
+main{
+  width:100%;
+  overflow-x:hidden;
+}
+#mslide{width: 100%;}
+#mslide h2{display:none;}
+#mslide div img{width:100%;}
+#visual_slide div img{width:100%;height:80vh;
+overflow: hidden;}
+article h2{
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+#visual_slide{
+  height: 80vh;
+
+}
+#visual_slide h2{
+  display: none;
+}
+#visual_slide img{
+  transform: scale(1);
+}
+/* #visual_slide div{
+  position: relative;
+} */
+#visual_slide span{
+  position: absolute;
+  z-index: 5;
+  font-size: 50px;
+  color: var(--f_color02);
+  font-weight: bold;
+  line-height: 60px;
+  text-shadow: 0px 0px 4px #333;
+  top: 250px;
+  left: 3%;
+}
+#visual_slide div{
+  transition: 0.3s;
+  position: absolute;
+}
+#visual_slide div:first-child{z-index: 2;}
+#visual_slide div:nth-child(2){z-index: 2;}
+#visual_slide div:nth-child(3){z-index: 2;}
+#visual_slide div:nth-child(4){z-index: 2;}
+
+
+#mslide .s_btn{
+  position: absolute;
+  top: 60%;
+  left: 3%;
+  display: flex;
+  z-index: 200;
+  border: 1px solid red;
+  justify-content: space-between;
+}
+#mslide .s_btn li{
+  background-color: #fff;
+}
+#mslide .s_btn li:first-child{
+  margin-right: 10px;
+}
+#mslide .s_btn li img{
+  width: 50px;
+}
+.e_btn{
+position: absolute;
+left: 3%;
+top: 80%;
+display: none;
+z-index: 100;
+}
+.e_btn li{
+  background-color: #ccc;
+  padding:12px 5px;
+  margin-right: 5px;
+}
+.e_btn li i{
+  font-size: 30px;
+}
+.e_btn li:hover{
+  cursor: pointer;
+}
+.ctrl_btn{
+  position: absolute;
+  right: 1.5%;
+  top: 45%;
+  z-index: 101;
+}
+.ctrl_btn li{
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: var(--f_color02);
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+.on{
+  background-color: var(--bg_color01) !important;
+}
+
+/* 콘텐츠 공통 레이아웃 */
+#news_con, #tab_con, #product, #event{
+  padding: 50px 0px;
+}
+
+/* 미에로 화이버 갤러리 서식 */
+#gallery{
+		background:#f36f21;
+		padding:60px 0px;
+	}
+#gallery article h2{
+  font-size:34px;
+  font-weight:bold;
+  padding-bottom:20px;
+  color:#fff;
+}
+	
+#gallery article{
+  width:1200px;margin:0px auto;
+}
+.girl {
+  width: 1200px;
+  display: grid;
+  grid-template-rows: 270px 270px 270px;
+  padding: 20px;grid-gap: 20px;
+  grid-template-areas:
+    "g01 g03 g04"
+    "g02 g03 g05"
+    "g06 g07 g08";
+}
+.girl figure {
+  overflow: hidden;
+  position:relative;
+}
+.girl figcaption {
+  height: 80px;
+  background-color: #111111;
+  position: absolute;
+  width:100%;bottom:-80px;
+  transition: 0.5s;
+}
+
+.girl figure:hover figcaption {
+    bottom:0px;
+}
+
+.girl figcaption h6 {
+  font-size: 20px;
+  font-weight: bold;
+  color: #f36f21;
+  padding: 10px 0px 5px 20px;
+}
+.girl figcaption p {
+  font-size: 10px;
+  color: #ffffff;
+  padding: 5px 0px 0px 20px;
+}
+.girl figcaption span {
+  border: 1px solid #ffffff;
+  font-size: 12px;
+  color: #ffffff;
+  padding: 5px;
+  position: absolute;
+  right: 20px;
+  bottom: 15px;
+}
+.girl img {
+  width: 100%;
+}
+.girl figure:first-child {
+  grid-area: g01;
+}
+.girl figure:nth-child(2){
+  grid-area: g02;
+}
+.girl figure:nth-child(3) {
+  grid-area: g03;
+}
+.girl figure:nth-child(4) {
+  grid-area: g04;
+}
+.girl figure:nth-child(5) {
+  grid-area: g05;
+}
+.girl figure:nth-child(6) {
+  grid-area: g06;
+}
+.girl figure:nth-child(7) {
+  grid-area: g07;
+}
+.girl figure:last-child {
+  grid-area: g08;
+}
+
+/* 더보기 버튼 서식 */
+.m_box{
+  text-align:center;
+  padding-top:10px;
+}
+.m_box > a{
+  background:#fff;
+  font-size:var(--f-size01);
+  padding:6px 20px;
+  border-radius:5px;
+}
+
+/* 갤러리 추가서식 */
+#list{
+  width:1200px;
+  margin:0px auto;
+  text-align:center;
+  overflow:auto;
+}
+#list ul{
+  display:flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+#list li{padding:15px 0px;}
+#list li img{width:100%;display:block;float:left;}
+
+#news_con{
+  width: var(--base_width);
+  margin:var(--m_auto);
+  display: flex;
+  padding: 100px 0px;
+}
+#news_con article iframe{
+  width: 650px;
+  height: 320px;
+}
+#news_con article:first-child{
+  width: 650px;
+
+}
+#news_con article:last-child{
+  width: 450px;
+  padding-left: 40px;
+}
+
+.c_title span{
+  font-size: 20px;
+  display: block;
+}
+#news_con i.far{
+  color: var(--bg_color01);
+  padding_right: 6px;
+  font-size: 16px;
+}
+#news_con ul > li{
+  white-space: nowrap; /*줄바꿈 안하기*/
+  text-overflow: ellipsis;/*생략 기호 나오게 */
+  overflow: hidden;/*넘치는글자 안보이게 하기*/
+  padding-top: 10px;
+}
+#news_con ul li a{
+  font-size: var(--f-size01);
+}
+
+#tab_con{
+  background-color: #e6e6e6;
+  height: 600px;
+}
+.tcon{
+  width: 1200px;
+  min-height: 600px;
+  margin: var(--m_auto);
+  background-image: url('../images/mcon2_7.png');/* 지금기준에서 폴더 밖에 있기 때문에 html처럼 './'이 아닌 '../'으로 해야함 기본이다*/
+  background-repeat: no-repeat;
+  background-position: center right;
+}
+.tcon h2{
+}
+.tcon > ul{
+  width: 650px;
+  padding-top: 30px;
+  display: flex;
+  position: relative;
+}
+.tcon > ul > li{
+  margin-right: 10px;
+}
+.tcon > ul > li > a{
+  background-color: var(--bg_color02);
+  color: var(--f_color02);
+  padding: 10px 25px;
+  font-size: var(--f_size03);
+}
+.on{
+  background-color: var(--bg_color01);
+}
+
+.tcon > ul > li > .cont{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 80px;
+  left: 0;
+  line-height: 200%;
+  padding: 10px;
+  color: var(--bg_color02);
+  display: none;
+}
+.tcon > ul > li > .cont span{
+  font-size: 22px;
+  display: block;
+  font-weight: bold;
+  padding-bottom: 10px;
+}
+.tcon > ul > li > .cont img{
+  width: 600px;
+}
+.tcon > ul > li:first-child .cont{
+  display: block;
+}
+#product{
+  padding: 50px 0px;
+  background-color: var(--bg_color03);
+}
+#product article{
+  width: var(--base_width);
+  margin: var(--m_auto);
+}
+#product article h2{}
+#product article ul{
+  display: flex;
+  justify-content: center;
+}
+#product article ul li{
+  width: 370px;
+  padding: 0 20px;
+  text-align: center;
+}
+#product article ul li img{
+  width: 80%;
+}
+#product article ul li h3{
+  font-size: 24px;
+  font-weight: bold;
+  padding: 10px 0px;
+  text-align: left;
+  border-bottom: 1px solid #986c02;
+}
+#product article ul li p{
+  padding-top: 10px;
+  text-align: left;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 180%;
+  color: #986c02;
+}
