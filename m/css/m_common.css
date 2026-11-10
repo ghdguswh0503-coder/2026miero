@@ -127,11 +127,14 @@ background-color: #fff;}
 
 /* 푸터영역 서식 */
 footer {
+  position: relative;
   width: 100%;
   color: #fff;
   background: #222222;
 }
 .f_inner nav{
+  position: absolute;
+  bottom: 0;
   display: flex;
   justify-content: space-around;
   

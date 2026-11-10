@@ -4,17 +4,20 @@ main{
   width:100%;
   overflow-x:hidden;
 }
-#mslide{width: 100%;}
+#mslide{position: relative;
+  background-color: #ff0;
+  height: 80vh;
+}
 #mslide h2{display:none;}
-#mslide div img{width:100%;}
-#visual_slide div img{width:100%;height:80vh;
-overflow: hidden;}
+#visual_slide div img{width:100%;height: 100%;
+}
 article h2{
   font-size: 32px;
   font-weight: bold;
   margin-bottom: 20px;
 }
 #visual_slide{
+  width: 100%;
   height: 80vh;
 
 }
@@ -39,14 +42,15 @@ article h2{
   left: 3%;
 }
 #visual_slide div{
+  width: 100%;
+  height: 100%;
   transition: 0.3s;
   position: absolute;
 }
-#visual_slide div:first-child{z-index: 2;}
-#visual_slide div:nth-child(2){z-index: 2;}
+#visual_slide div:first-child{z-index: 4;}
+#visual_slide div:nth-child(2){z-index: 3;}
 #visual_slide div:nth-child(3){z-index: 2;}
-#visual_slide div:nth-child(4){z-index: 2;}
-
+#visual_slide div:nth-child(4){z-index: 1;}
 
 #mslide .s_btn{
   position: absolute;
@@ -288,7 +292,7 @@ z-index: 100;
   background-color: var(--bg_color02);
   color: var(--f_color02);
   padding: 10px 25px;
-  font-size: var(--f_size03);
+  font-size: 19px;
 }
 .on{
   background-color: var(--bg_color01);
@@ -352,4 +356,74 @@ z-index: 100;
   font-weight: bold;
   line-height: 180%;
   color: #986c02;
+}
+#event {
+  width: 1200px;
+  margin: 0 auto;
+}
+#event > h2{display: none;}
+#event article h2{text-indent: 10px;}
+
+#event article{
+  width: 1200px;
+  margin: 0 auto;
+  position: relative;
+}
+#event .slide{
+  position: relative;
+  margin: 0 auto;
+  width: 1200px;
+  height: 300px;
+  overflow: hidden;
+}
+#event .slide .s_wrap{
+  width: 300%;
+  display: flex;
+  position: relative;
+  left: 0;
+  transition: 0.4s;
+}
+.s_wrap figure{
+  width: 60%;
+  display: flex;
+}
+.s_wrap figure img{
+  width: 100%;
+}
+.s_wrap figcaption{
+  width: 40%;
+  padding: 30px 5%;
+  box-sizing: border-box;
+}
+.s_wrap figcaption span{
+  background-color: #e9e8e8;
+  padding: 4px 8px;
+  font-size: 0.9rem;
+}
+.s_wrap figcaption p{
+  line-height: 30px;
+  font-size: 1.2rem;
+  font-weight: 500;
+  padding-top: 10px;
+}
+.s_wrap figcaption .date{
+  font-size: 1rem;
+  font-weight: normal;
+}
+
+#event .slide i.fas{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 100;
+  font-size: 16px;
+  border: 2px solid #333;
+  padding: 8px 8px;
+  border-radius: 50%;
+}
+#event .slide i.fa-angle-left{
+  left: 1% !important;
+}
+#event .slide i.fa-angle-right{
+  right: 1% !important;
 }

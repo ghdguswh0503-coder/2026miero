@@ -18,7 +18,7 @@ header > h1 > a > img{width:100%;}
 .gnb{
   position:absolute;
   top:60px;right:3%;
-  box-shadow: 2px 2px 3px;
+  /* box-shadow: 2px 2px 3px; */
 }
 .gnb > ul{
   display:flex;
@@ -31,7 +31,7 @@ header > h1 > a > img{width:100%;}
 }
 .gnb > ul > li > a{
   color:var(--f_color02);
-  font-size:var(--f_size03); /* 17 */
+  font-size: 20px; /* 17 */
 }
 .gnb > ul > li > a:hover{text-decoration:underline;}
 .gnb i.fa-angle-down{
@@ -90,7 +90,13 @@ footer {
   color: #fff;
   background: #222222;
 }
+.f_inner{
+  padding-top: 20px;
+  width: 1200px;
+  margin: 0 auto;
+}
 .f_inner nav{
+  width: 1200px;
   display: flex;
   justify-content: space-around;
   

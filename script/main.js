@@ -123,3 +123,66 @@ tab_list.forEach((tab, i)=>{
     }
   });  
 });
+const sw = document.querySelector('.s_wrap');
+const e_l_btn = document.querySelector('#event .fa-angle-left');
+const e_r_btn = document.querySelector('#event .fa-angle-right');
+let cont = 0;
+let sn = document.querySelectorAll('.s_wrap figure');
+
+let s_total = sn.length;
+
+console.log(s_total)
+
+const fig = 100; //100%
+sw.style.width = fig*s_total+'%';
+
+function mslide(n){
+  sw.style.left = fig*-n+'%';
+  cont = n;
+  console.log(sw.style.left)
+}
+let timer2 = setInterval(function(){
+  if(cont<s_total-1){
+    mslide(cont+1);
+  }else{
+    mslide(0);
+  }
+}, 3000);
+// 좌측 버튼 클릭시 시간제거하고 슬라이드 왼족으로 이동하기
+e_l_btn.addEventListener('click',function(){
+  clearInterval(timer2);
+  if(cont>0){
+    mslide(cont-1);
+  }else{
+    mslide(2);
+  }
+});
+
+// 우측 버튼 클릭시 시간제거하고 슬라이드 오른족으로 이동하기
+e_r_btn.addEventListener('click',function(){
+  clearInterval(timer2);
+  if(cont<s_total-1){
+    mslide(cont+1);
+  }else{
+    mslide(0);
+  }
+});
+
+e_l_btn.addEventListener('mouseleave',()=>{
+  let timer2 = setInterval(function(){
+  if(cont<s_total-1){
+    mslide(cont+1);
+  }else{
+    mslide(0);
+  }
+}, 3000);
+})
+e_r_btn.addEventListener('mouseleave',()=>{
+  let timer2 = setInterval(function(){
+  if(cont<s_total-1){
+    mslide(cont+1);
+  }else{
+    mslide(0);
+  }
+}, 3000);
+})
