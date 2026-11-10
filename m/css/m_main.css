@@ -144,7 +144,7 @@ article > h2{
   color:var(--f_color02);
   background-color:var(--bg_color02);
   padding:10px 25px;
-  font-size:var(--f-size03); /* 17 */
+  font-size: 19px; /* 17 */
 }
 
 .t_on{background:var(--bg_color01) !important;}
@@ -191,7 +191,7 @@ article > h2{
 }
 #product > article > ul > li{
   width: 94%;
-  padding:0px 3%;
+  padding:40px 3%;
   text-align: center;
   margin-bottom: 20px;
 }
@@ -201,7 +201,7 @@ article > h2{
 
 /* 제목, 문단 서식 */
 #product > article > ul > li h3{
-  height:50px;font-size: 1.5rem;
+  height:60px;font-size: 2rem;
   font-weight: bold;
   padding:16px 0px 10px 0px;
   text-align:left;
@@ -210,7 +210,7 @@ article > h2{
 #product > article > ul > li p{
   padding-top:10px;
   text-align: left;
-  font-size: 0.875rem;
+  font-size: 1.2rem;
   font-weight: bold;
   line-height:180%;
   color:#986c02;

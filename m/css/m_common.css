@@ -133,17 +133,27 @@ footer {
   background: #222222;
 }
 .f_inner nav{
-  position: absolute;
-  bottom: 0;
+  padding-top: 20px;
+  margin: 0 auto;
+  width: 70%;
+  height: 300px;
+  position: relative;
   display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
   justify-content: space-around;
   
 }
 
+.f_inner nav dl{
+  text-align: center;
+  width: 30%;
+}
 .f_inner nav dl dt{
   color:#fff;
   font-size: 18px
 }
+.sns{width: 100%;}
 .sns > dd {
   padding-top: 10px;
 }

@@ -65,7 +65,7 @@ article h2{
   background-color: #fff;
 }
 #mslide .s_btn li:first-child{
-  margin-right: 10px;
+  margin-right: 15px;
 }
 #mslide .s_btn li img{
   width: 50px;
@@ -329,7 +329,6 @@ z-index: 100;
   width: var(--base_width);
   margin: var(--m_auto);
 }
-#product article h2{}
 #product article ul{
   display: flex;
   justify-content: center;
@@ -343,7 +342,7 @@ z-index: 100;
   width: 80%;
 }
 #product article ul li h3{
-  font-size: 24px;
+  font-size: 34px;
   font-weight: bold;
   padding: 10px 0px;
   text-align: left;
@@ -352,7 +351,7 @@ z-index: 100;
 #product article ul li p{
   padding-top: 10px;
   text-align: left;
-  font-size: 14px;
+  font-size: 20px;
   font-weight: bold;
   line-height: 180%;
   color: #986c02;
